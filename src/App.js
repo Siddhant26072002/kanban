@@ -18,6 +18,7 @@ const PRIORITY_MAP = {
 };
 
 export default function App() {
+  const [show,setShow]=useState(false);
   const [groupData, setGroupData] = useState({});
   const [users, setUsers] = useState({});
   const [tickets, setTickets] = useState([]);
@@ -105,11 +106,11 @@ export default function App() {
   return (
     <div className="">
          <div className="navbar" >
-          <div className="main-dropdown">
+          <div className="main-dropdown" onClick={() => setShow(!show)}>
             <span>Display</span>
             <FontAwesome name="angle-down"></FontAwesome>
           </div>
-      <div className="select">        
+     {show && <div className="adjust"><div className="select">        
       <span>
         Grouping:
         </span>
@@ -136,7 +137,7 @@ export default function App() {
         >
           <option value="priority">Priority</option>
           <option value="title">Title</option>
-        </select></div>
+        </select></div></div>}
     
     </div>
 
@@ -158,7 +159,7 @@ export default function App() {
                   {groupBy == "userId" && users[data]?.name}
                   {groupBy == "priority" && PRIORITY_MAP[data]}
 
-                  <span className="ml-2">({groupData[data].length})</span>
+                  <span className="ml-2">{groupData[data].length}</span>
                     </div>
                     <div className="ind-heading-last">
                  <span> {groupBy == "status" && <FontAwesome name="plus" style={{ color: 'black', fontWeight: 'light' ,fontSize:'12px',opacity: 0.5  }}/> }</span>
