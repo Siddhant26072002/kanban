@@ -1,0 +1,102 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content:left;
+    align-items:flex-start;
+    margin-left: 20px;
+    row-gap: 20px;
+    height: 50px;
+}
+
+.select{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    width: 300px;
+}
+
+.selection{
+    border: 1px solid black;
+    width: 120px;
+}
+
+.ind-heading{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ind-heading-last{
+    display: flex;
+    justify-content: space-between;
+    width: 30px;
+    align-items: center;
+}
+
+.ind-column{
+    padding: 5px;
+    
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 5px;
+    gap:10px;
+    margin-bottom: 20px;
+}
+
+.title{
+    font-weight: bold;
+}
+
+.tag{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+}
+
+.outer-box{
+    border:1px solid grey;
+    width: 25px;
+    height: 32px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.exclamation{
+    text-align: center;
+    border: 1px solid black;
+    width:15px;
+    background-color: black;
+    color: white;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.tag-area{
+    border: 1px solid grey;
+    padding: 4px;
+    border-radius: 3px;
+    gap:5px;
+    color: grey;
+}
+
+.circle{
+    color: grey;
+}
+
+.main-dropdown{
+    border: 1px solid black;
+    padding: 4px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90px;
+}
