@@ -18,8 +18,8 @@ export default function App() {
   const [groupData, setGroupData] = useState({});
   const [users, setUsers] = useState({});
   const [tickets, setTickets] = useState([]);
-  const [groupBy, setGroupBy] = useState("status");
-  const [sortBy, setSortBy] = useState("priority");
+  const [groupBy, setGroupBy] = useState(localStorage.getItem('groupBy') || "status");
+  const [sortBy, setSortBy] = useState(localStorage.getItem('sortBy') ||"priority");
   const [totalColumns, setTotalColumns] = useState(1);
   const [loading, setLoading] = useState(false);
 
@@ -97,6 +97,11 @@ export default function App() {
   useEffect(() => {
     fetchDetails();
   }, []);
+
+  useEffect(()=>{
+    localStorage.setItem('groupBy', groupBy);
+    localStorage.setItem('sortBy',sortBy);
+  },[groupBy,sortBy]);
 
   console.log("groupBy: ", groupBy);
   return (
